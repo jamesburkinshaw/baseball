@@ -1,25 +1,20 @@
-from email.mime import base
-import re
-import string
 import cpi
-import pandas as pd
 import numpy as np
+import pandas as pd
 from sklearn import preprocessing
 
-# Save Data Locally 
-# File Path
-
+# File Paths
 basePath = '/Users/jamesburkinshaw/Desktop/Masters/Project/Baseball/Data/'
 salaryPath = basePath +'Salaries/'
 dataPath = basePath +'Refined/'
 
-
-# # Target Years
+# Target Years
 targetYears = [2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021]
 
-#set to True to load from files and adjust for inflation
+# Set to True to load from files and adjust for inflation
 update = False
 
+# TODO: Try Normalising for each year instead of adjusting for inflation
 if update:
     # Get most recent CPI values
     cpi.update()
